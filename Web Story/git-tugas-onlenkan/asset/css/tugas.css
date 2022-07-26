@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background-gradien: linear-gradient(-65deg, #4564e5, lightgrey);
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #393e46;
+}
+
+html::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+body {
+    width: 100%;
+    background-image: var(--background-gradien);
+    padding: 0;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/*zoomin*/
+
+figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+figure:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+:root {
+    --prim-color: #B5C746;
+    --light-color: rgba(255, 255, 255, 0.8);
+    --white-color: rgb(255, 255, 255);
+    --acsent-color: #393e46;
+    --full-width: 100%;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 275;
+}
+
+section {
+    margin-top: 40px;
+}
+
+
+/*Navbar*/
+
+.navbar {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: .5em;
+    letter-spacing: 2px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: #393e46;
+    padding: 1rem;
+}
+
+.navbar-links li a:hover {
+    background-color: #393e46;
+    border-radius: 10px;
+    color: #f1f1f1;
+    font-weight: 500;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.active {
+    font-weight: 500;
+}
+
+.swiper-pagination {
+    color: #f1f1f1;
+}
+
+.swiper-slide {
+    border-radius: 20px;
+}
+
+
+/*other*/
+
+.name-mentor {
+    text-decoration: none;
+    color: #1738be;
+}
+
+
+/*Footer*/
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    /*Navbar*/
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .activities_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .contentwrite {
+        margin-top: 10px;
+    }
+    .more {
+        margin: 10px;
+    }
+    .overlay {
+        font-size: 14px;
+        padding: 1%;
+        text-align: center;
+    }
+    .moreporto2 {
+        margin-top: 70px;
+    }
+    .moreporto3 {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentwrite {
+        margin-top: -10px;
+    }
+    h2 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    h4 {
+        font-size: 8px;
+        font-weight: 300;
+    }
+    h5 {
+        font-size: 8px;
+        font-weight: 275;
+    }
+    .more {
+        margin: 10px;
+    }
+    .overlay {
+        font-size: 16px;
+        padding: 1%;
+        text-align: center;
+    }
+    .moreporto2 {
+        margin-top: 80px;
+    }
+    .moreporto3 {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contentwrite {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .demo a {
+        visibility: hidden;
+    }
+    .contentwrite {
+        margin-top: 200px;
+    }
+}

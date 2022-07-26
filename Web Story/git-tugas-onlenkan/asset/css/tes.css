@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background-gradien: linear-gradient(-65deg, #4564e5, rgb(42, 39, 39));
+    --background-card0: linear-gradient(-40deg, #dd3848, rgb(172, 169, 169));
+    --background-card1: linear-gradient(-40deg, #8F3985, rgb(253, 253, 253));
+    --background-card2: linear-gradient(-40deg, #4e73bc, rgb(42, 39, 39));
+    --background-card3: linear-gradient(-40deg, #243169, rgb(213, 210, 210));
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #393e46;
+}
+
+html::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+/*zoomin*/
+
+figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+figure:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+:root {
+    --prim-color: #B5C746;
+    --light-color: rgba(255, 255, 255, 0.8);
+    --white-color: rgb(255, 255, 255);
+    --acsent-color: #393e46;
+    --full-width: 100%;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 275;
+}
+
+section {
+    margin-top: 40px;
+}
+
+body {
+    width: 100%;
+    background-image: var(--background-gradien);
+    padding: 0;
+    min-height: 100vh;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Cards */
+
+.card-column {
+    width: 50%;
+    float: left;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+.column-1 {
+    padding-top: 100px;
+}
+
+.card {
+    width: 92%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: #EB5160;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.5s;
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    border: 1px solid rgb(185, 180, 180);
+    opacity: 0.5;
+    left: -6px;
+    top: -6px;
+}
+
+.card h1 {
+    position: relative;
+    padding: 190px 0px 100px 10px;
+    width: 90%;
+}
+
+.card h1 {
+    transform: translate3d(20%, 0px, 0px);
+    transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+}
+
+.card>img {
+    width: 90%;
+    position: absolute;
+    top: -6%;
+    left: -6%;
+}
+
+.card-color-0 {
+    background-image: var(--background-card0);
+}
+
+.card-color-1 {
+    background-image: var(--background-card1);
+}
+
+.card-color-2 {
+    background-image: var(--background-card2);
+}
+
+.card-color-3 {
+    background-image: var(--background-card3);
+}
+
+
+/* 
+** Media Queries
+*/
+
+@media screen and (max-width: 600px) {
+    .card-column {
+        width: 90%;
+    }
+    .column-1 {
+        padding-top: 0px;
+    }
+    .open-content img {
+        margin-top: 40px;
+    }
+}
+
+
+/*Header*/
+
+
+/*Activities*/
+
+.activities_title_content {}
+
+.activities_section {
+    margin: 100px;
+}
+
+.img_activities {
+    filter: grayscale(90%);
+}
+
+.img_activities:hover {
+    filter: none;
+    transition: 0.5s;
+}
+
+
+/*Pesan*/
+
+.box {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 4px;
+    font-size: 2rem;
+    color: black;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s;
+}
+
+.button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+    height: 100%;
+    padding: 50px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(-65deg, #4564e5, rgb(212, 207, 207));
+    background-width: 10%;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s;
+}
+
+.popup:target {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+}
+
+.close {
+    text-decoration: none;
+    font-size: 4rem;
+    color: darkgray;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.close:hover {
+    color: white;
+}
+
+.close p {
+    color: white;
+}
+
+
+/*Footer*/
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+.contentwrite ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 800px) {
+    /*Navbar*/
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .activities_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .contentwrite {
+        margin-top: 10px;
+    }
+    .more {
+        margin: 10px;
+    }
+    .overlay {
+        font-size: 14px;
+        padding: 1%;
+        text-align: center;
+    }
+    .moreporto2 {
+        margin-top: 70px;
+    }
+    .moreporto3 {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contentwrite {
+        margin-top: -10px;
+    }
+    h2 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    h4 {
+        font-size: 8px;
+        font-weight: 300;
+    }
+    h5 {
+        font-size: 8px;
+        font-weight: 275;
+    }
+    .more {
+        margin: 10px;
+    }
+    .overlay {
+        font-size: 16px;
+        padding: 1%;
+        text-align: center;
+    }
+    .moreporto2 {
+        margin-top: 80px;
+    }
+    .moreporto3 {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contentwrite {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .demo a {
+        visibility: hidden;
+    }
+    .contentwrite {
+        margin-top: 200px;
+    }
+}
